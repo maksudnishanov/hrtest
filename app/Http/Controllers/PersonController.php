@@ -41,8 +41,8 @@ class PersonController extends Controller {
 
     private function personValidate($request) {
         $this->validate($request, [
-            'fname' => 'required|min:3|max:255',
-            'lname' => 'required|min:3|max:255',
+            'fname' => 'required|min:3|max:32',
+            'lname' => 'required|min:3|max:32',
             'birthday' => 'required|date',
         ]);
     }

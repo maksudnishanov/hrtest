@@ -19,7 +19,7 @@ class CreatePersonsTable extends Migration
             $table->bigInteger('mother_id')->nullable();
             $table->string('fname', 32);
             $table->string('lname', 32);
-            $table->timestamp('birthday');
+            $table->timestamp('birthday')->nullable();
             $table->timestamps();
         });
     }
