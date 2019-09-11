@@ -20,13 +20,13 @@ class Person extends Model {
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = [ 'father_id', 'mother_id'];
     protected $table = 'persons';
 
     public function father() {
         return $this->hasOne('App\Person', 'id', 'father_id');
     }
-    
+
     public function mother() {
         return $this->hasOne('App\Person', 'id', 'mother_id');
     }
